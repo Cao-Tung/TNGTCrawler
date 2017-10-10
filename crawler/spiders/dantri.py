@@ -1,7 +1,5 @@
 import scrapy
 from crawler.items import Item
-from bs4 import BeautifulSoup
-
 
 class DantriSpider(scrapy.Spider):
     name = "dantri"
@@ -16,7 +14,6 @@ class DantriSpider(scrapy.Spider):
             yield scrapy.Request(src, callback=self.parse_src)
 
         if len(response.xpath('//div[@class="fl"]/a[@class="fon27 mt1 mr2"]').extract()) == 1:
-            print("Hello","\n")
             next_page = response.xpath('//div[@class="fl"]/a[@class="fon27 mt1 mr2"]/@href').extract_first()
             print(next_page)
             if next_page is not None:
@@ -24,7 +21,6 @@ class DantriSpider(scrapy.Spider):
                 print(next_page)
                 yield scrapy.Request(next_page, callback=self.parse)
         elif len(response.xpath('//div[@class="fl"]/a[@class="fon27 mt1 mr2"]').extract()) == 2:
-            print("hi", "\n")
             next_page = response.xpath('//div[@class="fl"]/a/@href').extract()
             next = next_page[1]
             print(next)

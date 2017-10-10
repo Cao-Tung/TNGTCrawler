@@ -1,6 +1,5 @@
 import scrapy
 from crawler.items import Item
-from bs4 import BeautifulSoup
 
 
 class VNnetSpider(scrapy.Spider):
