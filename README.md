@@ -5,7 +5,7 @@ Crawler using Scrapy
   https://scrapyd.readthedocs.io/en/stable/install.html
   
 2. Run Crawler :
-  a : cd crawler/spider
+2.1 : cd crawler/spider
       scrapy crawl zing -o data.csv -t csv
-  b : cd crawler/spider
+2.2 : cd crawler/spider
       run file zing.sh
