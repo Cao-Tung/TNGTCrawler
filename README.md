@@ -2,7 +2,7 @@
 Crawler using Scrapy
 
 1. Install Scrapy :
-  https://scrapyd.readthedocs.io/en/stable/install.html
+  https://doc.scrapy.org/en/latest/intro/install.html
   
 2. Run Crawler :
 2.1 : cd crawler/spider
